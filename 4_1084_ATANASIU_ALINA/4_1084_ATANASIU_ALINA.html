@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Editor Fotografii</title>
+    <link rel="stylesheet" href="4_1084_ATANASIU_ALINA.css">
+  </head>
+  <body>
+
+    <h2>Incarca o imagine si incepe editarea!</h2>
+    <!-- drag&drop, input button -->
+
+    <div id="drop-area" ondragover="allowDrop(event)" ondrop="drop(event)">
+      <p>Trage si plaseaza o imagine aici sau alege un fisier</p>
+      <input type="file" id="file-input" onchange="handleFileSelect()">
+    </div>
+
+    <!-- canvas -->
+  
+    <div id="canvasText">
+    <div id="image-container">
+      <canvas id="image-canvas" width="500" height="600"></canvas>
+      <div id="selection-box"></div>
+    </div>
+
+ 
+
+    <!-- pentru a adauga text pe poza -->
+    <form id="textform">
+      <label for="text">Text:</label>
+      <input name="text" id="text">
+      <label for="dimensiune">Dimensiune:</label>
+      <input name="dimensiune" id="dimensiune">
+      <label for="culoare">Culoare:</label>
+      <input type="color" name="culoare" id="culoare">
+      <label for="xpozitie">Pozitie x:</label>
+      <input name="xpozitie" id="xpozitie">
+      <label for="ypozitie">Pozitie y:</label>
+      <input name="ypozitie" id="ypozitie">
+      <input type="button" name="btnText" value="Adauga Text" onclick="addText()">
+  </form>
+
+  <form id="scalareform">
+    <label for="inaltime">Inaltime:</label>
+    <input name="inaltime" id="inaltime">
+    <label for="latime">Latime:</label>
+    <input name="latime" id="latime">
+    <input type="button" name="btnScalare" value="Scalare" onclick="scalareImg()">
+  </form>
+
+  <input type="button" name="btnStergeSelectie" value="Sterge Selectia" onclick="stergeSelectia()">
+  <input type="button" name="btnCrop" value="Crop Imagine" onclick="cropImagine()">
+
+     <!-- save image button -->
+     <button id="btnSave" onclick="downloadImage()">Descarca Imaginea</button>
+</div>
+
+    <script src="4_1084_ATANASIU_ALINA.js"></script>
+  </body>
+</html>

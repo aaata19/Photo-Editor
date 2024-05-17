@@ -1,0 +1,93 @@
+body {
+  display: grid;
+  grid-template-columns: 80% 20%; /* Două coloane: 60% pentru imagine și 30% pentru text */
+  gap: 10px; /* Spațiu între coloane */
+  background: linear-gradient(to right, #8E24AA, #cf9ad1);
+  color: wheat;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 12px;
+}
+
+h2{
+  background-color: wheat;
+	color: #8E24AA;
+	
+	margin: 0;
+	padding: 16px;
+  grid-column: 1 / span 2;
+	margin: -12px -12px 20px -12px;
+}
+
+#btnSave {
+  grid-column: 2;
+  grid-row: span 1;
+}
+
+#drop-area {
+  border: 2px dashed wheat;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  grid-column: 1 / span 2; 
+}
+
+#canvasText {
+  display: grid;
+  gap: 10px; 
+}
+
+canvas {
+  border: 2px solid wheat;
+  display: block;
+}
+
+#image-container {
+  grid-column: 1;
+  grid-row: span 6;
+  position: relative;
+  overflow: hidden;
+}
+
+#selection-box {
+  position: absolute;
+  border: 1px dashed wheat;
+  background-color: rgba(0, 0, 255, 0.2);
+  pointer-events: none;
+}
+
+#textform,
+#scalareform {
+  border: 1px solid wheat;
+  color: #8E24AA;
+  grid-column: 2;
+  grid-row: span 1;
+  border-radius: 5px;
+  background-color: wheat;
+  /* padding: 16px; */
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+label
+{
+	display: block;
+	float: left;
+	clear: both;
+	
+	width: 35%;
+}
+
+input
+{
+	font-size: 11pt;
+	display: block;
+	float: right;	
+	width: 60%;
+}
+
+input[type="button"]
+{
+	font-weight: bold;	
+	padding: 5px;
+}
